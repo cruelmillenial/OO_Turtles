@@ -1,0 +1,43 @@
+# 🎨 Graphic Asset Prompt Schema — OO_Turtles (v1.1)
+# Defines the shared metadata header and per-species prompt structure
+# for Sora / diffusion-based sprite generation.
+
+schema:
+  id: "graphic_asset_prompt_schema_v1"
+  author: "ArtDirector_node"
+  project: "OO_Turtles"
+  date_created: "2025-10-25"
+  applies_to: "sprite and static graphic asset generation"
+  description: >
+    Schema used to compose and version prompts for Sora or equivalent
+    generative models. Each species entry is a complete seed prompt,
+    independent of any inheritance hierarchy.
+
+header_fields:
+  - style_profile        # e.g., "16-bit naturalistic"
+  - lighting             # e.g., "neutral studio light, soft shadow"
+  - perspective          # e.g., "three-quarter top-down"
+  - palette              # e.g., "earthy natural tones, 256-color indexed"
+  - output_size          # e.g., "128x128"
+  - format               # e.g., "PNG, transparent background"
+  - seed_strategy        # "unique_per_species"
+  - remix_policy         # "intra-species_only"
+
+species_fields:
+  - id
+  - version
+  - title
+  - prompt
+  - remarks
+  - remix_tags
+  - assets
+
+notes:
+  - >
+    The schema header defines shared aesthetic and technical context.
+  - >
+    Each species entry should be self-contained with clear morphological
+    and environmental descriptors.
+  - >
+    Filenames and prompt versions (v001, v002, etc.) map directly to assets
+    in /src/assets/sprite_turtles/.

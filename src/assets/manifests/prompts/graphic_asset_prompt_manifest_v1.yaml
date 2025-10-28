@@ -1,0 +1,68 @@
+# 🧾 Graphic Asset Prompt Manifest — OO_Turtles (v1.1)
+# Actual prompts and asset mappings produced by ArtDirector_node.
+
+meta:
+  schema_ref: "graphic_asset_prompt_schema_v1"
+  author: "ArtDirector_node"
+  date: "2025-10-25"
+  lighting: "neutral studio light, soft shadow"
+  perspective: "three-quarter top-down"
+  palette: "earthy natural tones, 256-color indexed"
+  style_profile: "16-bit naturalistic"
+  output_size: "128x128"
+  format: "PNG, transparent background"
+  seed_strategy: "unique_per_species"
+  remix_policy: "intra-species_only"
+
+species:
+  - id: redearedslider
+    version: v002
+    title: "Red-Eared Slider"
+    prompt: |
+      16-bit pixel sprite of a red-eared slider turtle basking near water,
+      three-quarter top-down perspective, natural coloration, isolated background,
+      SNES-era pixel art aesthetic with crisp outline and soft shadow.
+    remarks: "Distinct red head markings; semi-aquatic posture."
+    remix_tags: ["animation_frame_1", "idle_pose"]
+    assets:
+      - "src/assets/sprite_turtles/redearedslider/sprite_red_eared_slider.png"
+      - "src/assets/sprite_turtles/redearedslider/sprite_red_eared_slider_alt.png"
+
+  - id: mdeserttortoise
+    version: v002
+    title: "Mojave Desert Tortoise"
+    prompt: |
+      16-bit pixel sprite of a Mojave Desert Tortoise on sand,
+      top-down ¾ perspective, matte brown and beige shell,
+      desert lighting with gentle highlights, SNES-era pixel art.
+    remarks: "Emphasize shell scutes and terrestrial gait."
+    remix_tags: ["walk_cycle", "bask_pose"]
+    assets:
+      - "src/assets/sprite_turtles/mdeserttortoise/sprite_mdesert_tortoise_v002.png"
+      - "src/assets/sprite_turtles/mdeserttortoise/sprite_mdesert_tortoise_alt_v002.png"
+
+  - id: commonsnapping
+    version: v002
+    title: "Common Snapping Turtle"
+    prompt: |
+      16-bit pixel sprite of a common snapping turtle with open jaw,
+      low crouched profile, textured shell and tail, neutral studio light,
+      isolated transparent background.
+    remarks: "Predatory stance, muscular neck, visible tail."
+    remix_tags: ["attack_pose", "idle_pose"]
+    assets:
+      - "src/assets/sprite_turtles/commonsnapping/sprite_snapping_turtle.png"
+      - "src/assets/sprite_turtles/commonsnapping/sprite_snapping_turtle_alt.png"
+
+  - id: NAWood
+    version: v002
+    title: "North American Wood Turtle"
+    prompt: |
+      16-bit pixel sprite of a North American wood turtle walking on wet soil,
+      three-quarter top-down view, reddish-orange limbs, neutral lighting,
+      crisp silhouette, SNES-era pixel style.
+    remarks: "Riparian coloration and raised scute pattern."
+    remix_tags: ["walk_cycle", "head_turn"]
+    assets:
+      - "src/assets/sprite_turtles/NAWood/sprite_NAWood_turtle.png"
+      - "src/assets/sprite_turtles/NAWood/sprite_NAWood_turtle_alt.png"
