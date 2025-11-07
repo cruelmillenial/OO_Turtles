@@ -6,12 +6,22 @@ export function drawGrid(ctx, grid, size=30) {
   }
 }
 
-export function drawTurtle(ctx, turtle, size=30) {
-  const {x,y} = axialToPixel(turtle.cell.q, turtle.cell.r, size);
-  ctx.fillStyle = "green";
-  ctx.beginPath();
-  ctx.arc(x, y, size/3, 0, 2*Math.PI);
-  ctx.fill();
+export function drawTurtle(ctx, turtle, size = 30) {
+  const { x, y } = axialToPixel(turtle.cell.q, turtle.cell.r, size);
+  const sprite = turtle.sprite;        // <-- make sure this line exists
+
+  if (sprite && sprite.complete) {
+    const scale = 0.6;
+    const w = size * scale * 2;
+    const h = size * scale * 2;
+    ctx.drawImage(sprite, x - w / 2, y - h / 2, w, h);
+  } else {
+    // fallback dot while image loads
+    ctx.fillStyle = "green";
+    ctx.beginPath();
+    ctx.arc(x, y, size / 3, 0, 2 * Math.PI);
+    ctx.fill();
+  }
 }
 
 function axialToPixel(q,r,s) {
